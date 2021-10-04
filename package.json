@@ -1,9 +1,12 @@
 {
   "name": "instaclone",
   "version": "1.0.0",
-  "description": "",
-  "scripts": { 
-    "dev": ""
+  "description": "Instaclone Backend.",
+  "scripts": {
+    "dev": "nodemon --exec babel-node server",
+    "migrate": "npx prisma migrate dev --preview-feature",
+    "start": "node server.js",
+    "studio": "npx prisma studio"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +19,22 @@
     "url": "https://github.com/marry-me-rose/instaclone-backend/issues"
   },
   "homepage": "https://github.com/marry-me-rose/instaclone-backend#readme",
-  "description": ""
+  "dependencies": {
+    "@graphql-tools/load-files": "^6.5.0",
+    "@graphql-tools/merge": "^8.1.2",
+    "@graphql-tools/schema": "^8.2.0",
+    "@prisma/client": "3.1.1",
+    "apollo-server": "^3.3.0",
+    "dotenv": "^10.0.0",
+    "graphql": "^15.6.0",
+    "graphql-tools": "^8.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/node": "^7.15.4",
+    "@babel/preset-env": "^7.15.6",
+    "nodemon": "^2.0.12",
+    "prisma": "^3.1.1"
+  },
+  "main": "server.js"
 }
-  
